@@ -40,9 +40,17 @@ const secStart =() =>{
 
 const minStart =() =>{
     minRef.current = setInterval(()=>{
-      setmin(prev => prev+1)
-    },60000)
+        setmin(prev => {
+            if(sec >= 60){
+                return prev+1
+            }
+           
+        }    
+            )
+    }
+    )
 }
+
 
 const milliStart =() =>{
     milRef.current = setInterval(()=>{
